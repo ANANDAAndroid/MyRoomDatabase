@@ -46,6 +46,9 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation ("androidx.arch.core:core-testing:2.1.0")
+    testImplementation ("org.mockito.kotlin:mockito-kotlin:5.2.1")
+    testImplementation ("org.mockito:mockito-core:5.7.0")
     val room_version = "2.6.1"
 
     implementation("androidx.room:room-runtime:$room_version")
@@ -55,6 +58,10 @@ dependencies {
 
     // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:$room_version")
+    testImplementation("androidx.room:room-testing:$room_version")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
+    androidTestImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1")
 
 
     implementation("com.google.dagger:hilt-android:2.48")
